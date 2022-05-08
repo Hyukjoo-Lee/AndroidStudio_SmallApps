@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/topbun"
+        android:contentDescription="TopImage"/>
+
+    <RadioGroup
+        android:id="@id/radioGroupPatty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="vertical">
+
+        <RadioButton
+            android:id="@+id/radioBeef"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="Beef Patty" />
+
+        <RadioButton
+            android:id="@+id/radioLamb"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Lamb Patty"
+            android:textColor="#3E2723" />
+
+        <RadioButton
+            android:id="@+id/radioOstrich"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Ostrich Patty" />
+
+    </RadioGroup>
+
+    <CheckBox
+        android:id="@+id/checkBoxProsciutto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Prosciutto" />
+
+    <RadioGroup
+        android:id="@id/radioGroupCheese"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/radioAsiagoCheese"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:checked="true"
+            android:text="Asiago Cheese" />
+
+        <RadioButton
+            android:id="@+id/radioCremeFraiche"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Creme Fraiche" />
+
+    </RadioGroup>
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="10dp"/>
+
+    <TextView
+        android:id="@+id/textViewCaviarSauce"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:text="Caviar sauce up to one spoon" />
+
+    <SeekBar
+        android:id="@+id/seekBarSauce"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <ImageView
+        android:id="@+id/imageViewBottomBun"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/bottombun"
+        android:contentDescription="Burger Calorie Counter"/>
+
+    <TextView
+        android:id="@+id/textViewCalories"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Calories? "
+        android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+
+</androidx.appcompat.widget.LinearLayoutCompat>

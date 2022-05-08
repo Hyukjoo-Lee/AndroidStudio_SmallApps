@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">PowerReceiver</string>
+    <string name="unknown_action">Unknown action is detected</string>
+    <string name="power_connected">Power is connected</string>
+    <string name="power_disconnected">Power is disconnected</string>
+</resources>

@@ -16,6 +16,15 @@ import com.example.alarmhomework.databinding.ActivityMainBinding;
 
 import java.util.Calendar;
 
+/**
+ * This is the simple alarm app that notify you to wake up at a specific time.
+ * 'Alarm Manager' is a component that makes that possible.
+ *
+ * <receiver android:name=".AlarmReceiver"/> should be declared in Manifest.xml
+ *
+ * When you set the time in time_picker and press the set button, Notification occurs at that time
+ * AlarmManager.INTERVAL_DAY is used so that an alarm will occur every day
+ */
 public class MainActivity extends AppCompatActivity {
 
     private ActivityMainBinding binding;
@@ -28,6 +37,7 @@ public class MainActivity extends AppCompatActivity {
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         View view = binding.getRoot();
         setContentView(view);
+
         binding.btnSetTime.setOnClickListener(v -> {
 
             Calendar calendar = Calendar.getInstance();
@@ -44,6 +54,8 @@ public class MainActivity extends AppCompatActivity {
             AlarmManager alarmManager = (AlarmManager) this.getSystemService(Context.ALARM_SERVICE);
             if (alarmManager != null) {
                 Intent notifyIntent = new Intent(this, AlarmReceiver.class);
+
+                //  Set PendingIntent.. we can get the intend by using requestCode = '1'
                 PendingIntent alarmIntent = PendingIntent.getBroadcast(this, 1, notifyIntent, PendingIntent.FLAG_UPDATE_CURRENT);
 
                 alarmManager.setRepeating(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(),
